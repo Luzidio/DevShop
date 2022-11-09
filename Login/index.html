@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div class="login-container">
+        <div class="user signinBX">
+          <div class="imgBx">
+            <img
+              src="https://cdn.dribbble.com/users/846207/screenshots/4787301/fingerprint.gif"
+              width="440px"
+              height="100%"
+              alt=""
+            />
+          </div>
+          <div class="formBx">
+            <form>
+              <h2>Sign In</h2>
+              <input type="text" placeholder="Username" />
+              <input type="password" placeholder="Password" />
+              <input type="submit" value="Login" />
+              <p class="signup">
+                Don't have an account?
+                <a href="#" onclick="toggleForm();">Sign up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="user singupBx">
+          <div class="formBx">
+            <form>
+              <h2>Create an account</h2>
+              <input type="text" placeholder="Username" />
+              <input type="email" placeholder="Email Address" />
+              <input type="tel" placeholder="+258 8* *** ***" />
+              <input type="password" placeholder="Create Password" />
+              <input type="password" placeholder="Confirm Password" />
+              <input type="submit" value="Sign Up" />
+              <p class="signup">
+                Already have an account?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx">
+            <img
+              src="https://cdn.dribbble.com/users/3386713/screenshots/6826697/s8_gif_1.gif"
+              width="440px"
+              height="100%"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      function toggleForm() {
+        var loginContainer = document.querySelector('.login-container')
+        loginContainer.classList.toggle('active')
+      }
+    </script>
+  </body>
+</html>
