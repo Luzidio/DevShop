@@ -1,5 +1,7 @@
 'use strict';
 
+const requestURL = "https://localhost:7200/api/Products"
+
 // modal variables
 const modal = document.querySelector('[data-modal]');
 const modalCloseBtn = document.querySelector('[data-modal-close]');
@@ -85,4 +87,39 @@ for (let i = 0; i < accordionBtn.length; i++) {
 
   });
 
+}
+
+
+
+
+const openModal = document.querySelector('.btn-openModal');
+const closeModal = document.querySelector('.btn-coloseModal');
+const loginModal = document.querySelector('.login-modal');
+const fade = document.querySelector('fade');
+
+
+const toggleModal = () => {
+    loginModal.classList.toggle('hide');
+}
+
+
+[openModal, closeModal].forEach((e) => {
+    e.addEventListener('click', () => toggleModal())
+})
+
+
+
+
+
+
+
+
+getProducts(requestURL)
+
+function getProducts(url) {
+    fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            showProducrs(data)
+        })
 }

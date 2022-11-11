@@ -49,6 +49,78 @@
 </div>
 
 
+<div class="fade">
+    <div class="login-modal hide">
+
+        <section class="login-section">
+
+            <button class="btn-coloseModal">
+                X
+            </button>
+            <div class="login-container">
+
+
+                <div class="user signinBX">
+                    <div class="imgBx">
+                        <img src="https://cdn.dribbble.com/users/846207/screenshots/4787301/fingerprint.gif"
+                             width="440px"
+                             height="100%"
+                             alt="" />
+                    </div>
+                    <div class="formBx">
+                        <form>
+                            <h2>Sign In</h2>
+                            <input type="text" placeholder="Username" />
+                            <input type="password" placeholder="Password" />
+                            <input type="submit" value="Login" />
+                            <p class="signup">
+                                Don't have an account?
+                                <a href="#" onclick="toggleForm();">Sign up.</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="user singupBx">
+                    <div class="formBx">
+                        <form>
+                            <h2>Create an account</h2>
+                            <input type="text" placeholder="Username" />
+                            <input type="email" placeholder="Email Address" />
+                            <input type="tel" placeholder="+258 8* *** ***" />
+                            <input type="password" placeholder="Create Password" />
+                            <input type="password" placeholder="Confirm Password" />
+                            <input type="submit" value="Sign Up" />
+                            <p class="signup">
+                                Already have an account?
+                                <a href="#" onclick="toggleForm();">Sign in.</a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="imgBx">
+                        <img src="https://cdn.dribbble.com/users/3386713/screenshots/6826697/s8_gif_1.gif"
+                             width="440px"
+                             height="100%"
+                             alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
 <!--
     - NOTIFICATION TOAST
   -->
@@ -169,8 +241,13 @@
 
             <div class="header-user-actions">
 
-                <button class="action-btn">
-                    <ion-icon name="person-outline"></ion-icon>
+                <button class="action-btn btn-openModal">
+                     
+                     <!-- <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Index">
+                          <ion-icon name="person-outline"></ion-icon>
+                      </a> -->
+
+                      <ion-icon name="person-outline"></ion-icon>
                 </button>
 
                 <button class="action-btn">
@@ -727,7 +804,7 @@
  <!--
     - MAIN
   -->
-  <main>
+ <main>
 
     <!--
       - BANNER
@@ -3536,3 +3613,11 @@
     </div>
 
   </footer>
+
+
+<script type="text/javascript">
+    function toggleForm() {
+        var loginContainer = document.querySelector('.login-container')
+        loginContainer.classList.toggle('active')
+    }
+</script>
